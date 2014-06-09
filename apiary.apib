@@ -1,0 +1,45 @@
+FORMAT: 1A
+HOST: http://publisherz.herokuapp.com
+
+# Publisherz
+Publisherz API provides info on music, movies, and books.
+
+# Group Notes
+Notes related resources of the **Publisherz API**
+
+## Movies Collection [/movies]
+### List all Movies [GET]
+
++ Response 200 (application/json)
+
+            { "page":1,"results": [  {  "id" : 1, "name" : "Breathless", "director" : "Jean-Luc Godard", "writer" : "Fran\u00e7ois Truffaut", "release_date" : 1960 } ] }
+
+### Create a Movie [POST]
+
++ Request (application/json)
+
+        { "title": "Buy cheese and bread for breakfast." }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }
+
+## Movie [/movies/{id}]
+A single Movie object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Movie to perform action with. Has example value.
+
+### Retrieve a Movie [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
+
+### Remove a Movie [DELETE]
++ Response 204
