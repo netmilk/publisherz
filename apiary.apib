@@ -10,6 +10,8 @@ Notes related resources of the **Publisherz API**
 ## Movies Collection [/movies]
 ### List all Movies [GET]
 
++ Request (application/json)
+
 + Response 200 (application/json)
 
             { "page":1,"results": [  {  "id" : 1, "name" : "Breathless", "director" : "Jean-Luc Godard", "writer" : "Fran\u00e7ois Truffaut", "release_date" : 1960 } ] }
@@ -31,6 +33,9 @@ A single Movie object with all its details
     + id (required, number, `1`) ... Numeric `id` of the Movie to perform action with. Has example value.
 
 ### Retrieve a Movie [GET]
+
++ Request (application/json)
+
 + Response 200 (application/json)
 
     + Header
@@ -42,4 +47,7 @@ A single Movie object with all its details
             { "id": 2, "title": "Pick-up posters from post-office" }
 
 ### Remove a Movie [DELETE]
+
++ Request (Application/json)
+
 + Response 204
