@@ -11,6 +11,10 @@ Notes related resources of the **Publisherz API**
 ### List all Movies [GET]
 
 + Request (application/json)
+  + Headers
+    
+      Accept: application/json
+
 
 + Response 200 (application/json)
 
@@ -19,7 +23,11 @@ Notes related resources of the **Publisherz API**
 ### Create a Movie [POST]
 
 + Request (application/json)
+  + Headers
 
+      Accept: application/json
+
+  + Body
         { "title": "Buy cheese and bread for breakfast." }
 
 + Response 201 (application/json)
@@ -35,6 +43,9 @@ A single Movie object with all its details
 ### Retrieve a Movie [GET]
 
 + Request (application/json)
+  + Headers
+
+      Accept: application/json
 
 + Response 200 (application/json)
 
@@ -49,5 +60,8 @@ A single Movie object with all its details
 ### Remove a Movie [DELETE]
 
 + Request (Application/json)
+ + Headers
+
+      Accept: application/json
 
 + Response 204
